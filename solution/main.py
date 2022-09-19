@@ -2,8 +2,9 @@ numbers_list = []
 
 
 def read_input(n):
-    file1 = open('sample-io/sudoku_checker_sample_ts1_inputs.txt', 'r')
-    lines = file1.readlines()
+    # file = open('sample-io/sudoku_checker_sample_ts1_inputs.txt', 'r')
+    file = open('test.txt', 'r')
+    lines = file.readlines()
     number_of_cases = 0
 
     for line in lines:
