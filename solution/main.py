@@ -8,6 +8,7 @@ def read_input(n):
     lines = file1.readlines()
 
     for line in lines:
+        number_of_cases = int(lines[0])
         for i in range(0, n):
             numbers_list.append(int(line(i)))
     print(numbers_list)
