@@ -1,6 +1,3 @@
-numbers_list = []
-
-
 def read_input(n):
     # file = open('sample-io/sudoku_checker_sample_ts1_inputs.txt', 'r')
     file = open('test.txt', 'r')
@@ -17,8 +14,13 @@ def read_input(n):
             # Read the number of rows and columns
             n = int(lines[1]) # TODO: Fix this
 
-            for j in range(0, n):
-                numbers_list.append(int(line.strip()))
+            # Read the number lines as string
+            numbers_str_list = []
+            for j in range(0, n*n):
+                numbers_str_list.append(lines[2+j])
+
+            # Convert the string list to int list
+            numbers_list = []
 
     file.close()
     print(numbers_list)
