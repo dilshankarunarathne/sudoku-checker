@@ -18,7 +18,7 @@ def read_input(n):
             for j in range(0, n):
                 numbers_list.append(int(line.strip()))
 
-
+    file.close()
     print(numbers_list)
 
 
