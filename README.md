@@ -31,5 +31,11 @@ Memory limit: 1GB.
 
 1 ≤ T ≤ 100
 
+## Test set 1 - Visible
+N = 3
 
+## Test set 2 - Hidden
+3 ≤ N ≤ 6
+
+Sample
 
