@@ -74,4 +74,9 @@ Sample input
 3 4 5 2 8 6 1 7 9
 </pre>
 
-
+Sample output
+<pre>
+Case #1: Yes
+Case #2: No
+Case #3: No
+</pre>
