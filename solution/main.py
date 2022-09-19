@@ -7,11 +7,14 @@ def read_input(n):
     number_of_cases = 0
 
     for line in lines:
+        # Read the number of test cases
         number_of_cases = int(lines[0])
-        
 
-        for i in range(0, n):
-            numbers_list.append(int(line.strip()))
+        # Read the number of rows and columns
+        n = int(lines[1])
+        for i in range(0, number_of_cases):
+            for i in range(0, n):
+                numbers_list.append(int(line.strip()))
 
 
     print(numbers_list)
