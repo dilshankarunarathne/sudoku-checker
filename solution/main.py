@@ -11,7 +11,7 @@ def read_input(n):
         number_of_cases = int(lines[0])
 
         # Read the number of rows and columns
-        n = int(lines[1])
+        n = int(lines[1+number_of_cases])
         for i in range(0, number_of_cases):
             for i in range(0, n):
                 numbers_list.append(int(line.strip()))
