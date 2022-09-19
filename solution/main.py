@@ -10,10 +10,11 @@ def read_input(n):
         # Read the number of test cases
         number_of_cases = int(lines[0])
 
-        # Read the number of rows and columns
-        n = int(lines[1+number_of_cases])
         for i in range(0, number_of_cases):
-            for i in range(0, n):
+            # Read the number of rows and columns
+            n = int(lines[1]) # TODO: Fix this
+
+            for j in range(0, n):
                 numbers_list.append(int(line.strip()))
 
 
