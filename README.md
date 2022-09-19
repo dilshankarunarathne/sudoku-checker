@@ -29,5 +29,7 @@ For each test case, output one line containing "Case #x: y", where x is the case
 Time limit: 30 seconds per test set.  
 Memory limit: 1GB.
 
+1 ≤ T ≤ 100
+
 
 
