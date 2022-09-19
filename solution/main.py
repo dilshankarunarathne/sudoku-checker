@@ -12,6 +12,8 @@ def read_input(n):
         number_of_cases = int(lines[0])
 
         for i in range(0, number_of_cases):
+            line = 1 + (i*9) # TODO: Fix this
+
             # Read the number of rows and columns
             n = int(lines[1]) # TODO: Fix this
 
