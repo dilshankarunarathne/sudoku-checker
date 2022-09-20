@@ -19,7 +19,7 @@ def checker() -> bool:
 
         for case in range(number_of_cases):
             flag = True
-            
+
             # ==== READ DATA ====
 
             # Read N for case
@@ -65,7 +65,8 @@ def checker() -> bool:
             for i in range(n * n):
                 if not (ideal_set == sorted(vert_lines[i])):
                     print('squares[i] = ', squares[i]) # DEBUG
-                    return False
+                    flag = False
+                    break
 
             # Check if the squares are valid
 
@@ -73,7 +74,15 @@ def checker() -> bool:
             for i in range(n * n):
                 if not (ideal_set == sorted(squares[i])):
                     print('squares[i] = ', squares[i]) # DEBUG
-                    return False
+                    flag = False
+                    break
+
+            # ==== FINAL CHECK ====
+
+            if flag:
+                print('Case #{}: YES'.format(case + 1))
+            else:
+                print('Case #{}: NO'.format(case + 1))
 
         clear()
         return True
