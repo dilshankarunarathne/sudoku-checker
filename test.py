@@ -1,5 +1,8 @@
-lines = []
 ideal_set = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+
+lines = []
+vert_lines = []
+squares = []
 
 with open('test.txt', 'r') as f:
     # Read the number of cases
