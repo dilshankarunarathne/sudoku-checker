@@ -18,8 +18,6 @@ with open('test.txt', 'r') as f:
             lines.append(f.readline().split())
             print('line = ', lines[line])
 
-for x in lines[0]:
-    sum += i
-
-print('first line sum = ', sum)
+ideal_set = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+print(ideal_set == sorted(lines[0]))
 
