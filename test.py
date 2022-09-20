@@ -1,5 +1,6 @@
 data = []
 lines = []
+ideal_set = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
 
 with open('test.txt', 'r') as f:
 
@@ -8,6 +9,8 @@ with open('test.txt', 'r') as f:
     print('num cases = ', number_of_cases)
 
     for case in range(number_of_cases):
+        # ==== READ DATA ===
+
         # Read N for case
         n = int(f.readline())
         print('n = ', n)
@@ -18,6 +21,9 @@ with open('test.txt', 'r') as f:
             lines.append(f.readline().split())
             print('line = ', lines[line])
 
-ideal_set = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
-print(ideal_set == sorted(lines[0]))
+        # ==== PROCESS DATA ===
+
+        # For N*N times
+        for l in range(n * n):
+            print(ideal_set == sorted(lines[l]))
 
