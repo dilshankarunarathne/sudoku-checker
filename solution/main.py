@@ -1,29 +1,63 @@
-def read_input(n):
-    # file = open('sample-io/sudoku_checker_sample_ts1_inputs.txt', 'r')
-    file = open('test.txt', 'r')
-    lines = file.readlines()
-    number_of_cases = 0
+ideal_set = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
 
-    for line in lines:
-        # Read the number of test cases
-        number_of_cases = int(lines[0])
+lines = []
+vert_lines = []
+squares = []
 
-        for i in range(0, number_of_cases):
-            line = 1 + (i*9) # TODO: Fix this
+with open('test.txt', 'r') as f:
+    # Read the number of cases
+    number_of_cases = int(f.readline())
+    # print('num cases = ', number_of_cases) # DEBUG
 
-            # Read the number of rows and columns
-            n = int(lines[1]) # TODO: Fix this
+    for case in range(number_of_cases):
+        # ==== READ DATA ====
 
-            # Read the number lines as string
-            numbers_str_list = []
-            for j in range(0, n*n):
-                numbers_str_list.append(lines[2+j])
+        # Read N for case
+        n = int(f.readline())
+        # print('n = ', n) # DEBUG
 
-            # Convert the string list to int list
-            numbers_list = []
+        # For N*N times
+        for line in range(n * n):
+            # Read the line
+            lines.append(f.readline().split())
+            # print('line = ', lines[line]) # DEBUG
 
-    file.close()
-    print(numbers_list)
+        # ==== FILL DATA ====
+
+        # Fill vertical lines TODO
+        for i in range(n * n):
+            vert_lines.append([])
+            for j in range(n * n):
+                vert_lines[i].append(lines[j][i])
+        # print('vert_lines = ', vert_lines) # DEBUG
+
+        # Fill squares TODO
+        for i in range(n * n):
+            squares.append([])
+            for j in range(n * n):
+                squares[i].append(lines[i][j])
+        # print('squares = ', squares) # DEBUG
+
+        # ==== PROCESS DATA ====
+
+        # Check if the horizontal lines are valid
+
+        # For N*N times
+        for i in range(n * n):
+            print(ideal_set == sorted(lines[i]))
+
+        # Check if the vertical lines are valid TODO
+
+        # For N*N times
+        for i in range(n * n):
+            print(ideal_set == sorted(vert_lines[i]))
+
+        # Check if the squares are valid TODO
+
+        # For N*N times
+        for i in range(n * n):
+            print(ideal_set == sorted(squares[i]))
+
 
 
 if __name__ == '__main__':
