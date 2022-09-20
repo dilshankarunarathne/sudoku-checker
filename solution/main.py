@@ -4,7 +4,8 @@ lines = []
 vert_lines = []
 squares = []
 
-def checker():
+
+def checker() -> bool:
     with open('test.txt', 'r') as f:
         # Read the number of cases
         number_of_cases = int(f.readline())
@@ -70,7 +71,8 @@ def checker():
 
 
 if __name__ == '__main__':
-    if not checker():
+    sudoku = checker()
+    if sudoku:
         print("Sudoku is not valid")
     else:
         print("Sudoku is valid")
