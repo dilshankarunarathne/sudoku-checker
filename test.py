@@ -1,5 +1,8 @@
 data = []
 
+f1 = open('test.txt')
+print(f1.read())
+
 with open('test.txt') as f:
     for line in f:
 
