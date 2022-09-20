@@ -11,7 +11,7 @@ def clear():
     squares.clear()
 
 
-def checker() -> bool:
+if __name__ == '__main__':
     with open('test_big.txt', 'r') as f:
         # Read the number of cases
         number_of_cases = int(f.readline())
@@ -85,8 +85,3 @@ def checker() -> bool:
                 print('Case #{}: NO'.format(case + 1))
 
         clear()
-        return True
-
-
-if __name__ == '__main__':
-    checker()
