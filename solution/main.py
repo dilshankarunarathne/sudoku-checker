@@ -58,3 +58,4 @@ if __name__ == '__main__':
             # For N*N times
             for i in range(n * n):
                 print(ideal_set == sorted(squares[i]))
+
