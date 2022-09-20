@@ -69,6 +69,7 @@ def checker() -> bool:
                 if not (ideal_set == sorted(squares[i])):
                     return False
 
+        clear()
 
 
 if __name__ == '__main__':
