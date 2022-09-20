@@ -4,7 +4,7 @@ lines = []
 vert_lines = []
 squares = []
 
-if __name__ == '__main__':
+def checker():
     with open('test.txt', 'r') as f:
         # Read the number of cases
         number_of_cases = int(f.readline())
@@ -45,17 +45,32 @@ if __name__ == '__main__':
 
             # For N*N times
             for i in range(n * n):
-                print(ideal_set == sorted(lines[i]))
+                if not (ideal_set == sorted(lines[i])):
+                    return False
 
             # Check if the vertical lines are valid TODO
 
             # For N*N times
             for i in range(n * n):
-                print(ideal_set == sorted(vert_lines[i]))
+                if not (ideal_set == sorted(vert_lines[i])):
+                    return False
 
             # Check if the squares are valid TODO
 
             # For N*N times
             for i in range(n * n):
-                print(ideal_set == sorted(squares[i]))
+                if not (ideal_set == sorted(squares[i])):
+                    return False
 
+            # ==== CLEAN DATA ====
+
+            lines = []
+            vert_lines = []
+            squares = []
+
+
+if __name__ == '__main__':
+    if not checker():
+        print("Sudoku is not valid")
+    else:
+        print("Sudoku is valid")
