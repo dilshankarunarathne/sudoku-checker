@@ -4,57 +4,80 @@ lines = []
 vert_lines = []
 squares = []
 
-with open('./test.txt', 'r') as f:
-    # Read the number of cases
-    number_of_cases = int(f.readline())
-    # print('num cases = ', number_of_cases) # DEBUG
 
-    for case in range(number_of_cases):
-        # ==== READ DATA ====
+def clear():
+    lines.clear()
+    vert_lines.clear()
+    squares.clear()
 
-        # Read N for case
-        n = int(f.readline())
-        # print('n = ', n) # DEBUG
 
-        # For N*N times
-        for line in range(n * n):
-            # Read the line
-            lines.append(f.readline().split())
-            # print('line = ', lines[line]) # DEBUG
+def checker() -> bool:
+    with open('test_big.txt', 'r') as f:
+        # Read the number of cases
+        number_of_cases = int(f.readline())
+        # print('num cases = ', number_of_cases) # DEBUG
 
-        # ==== FILL DATA ====
+        for case in range(number_of_cases):
+            # ==== READ DATA ====
 
-        # Fill vertical lines
-        for i in range(n * n):
-            vert_lines.append([])
-            for j in range(n * n):
-                vert_lines[i].append(lines[j][i])
-        # print('vert_lines = ', vert_lines) # DEBUG
+            # Read N for case
+            n = int(f.readline())
+            # print('n = ', n) # DEBUG
 
-        # Fill squares
-        for i in range(n * n):
-            squares.append([])
-            for j in range(n * n):
-                squares[i].append(lines[i][j])
-        # print('squares = ', squares) # DEBUG
+            # For N*N times
+            for line in range(n * n):
+                # Read the line
+                lines.append(f.readline().split())
+                # print('line = ', lines[line]) # DEBUG
 
-        # ==== PROCESS DATA ====
+            # ==== FILL DATA ====
 
-        # Check if the horizontal lines are valid
+            # Fill vertical lines
+            for i in range(n * n):
+                vert_lines.append([])
+                for j in range(n * n):
+                    vert_lines[i].append(lines[j][i])
+            # print('vert_lines = ', vert_lines) # DEBUG
 
-        # For N*N times
-        for i in range(n * n):
-            print(ideal_set == sorted(lines[i]))
+            # Fill squares
+            for i in range(n * n):
+                squares.append([])
+                for j in range(n * n):
+                    squares[i].append(lines[i][j])
+            # print('squares = ', squares) # DEBUG
 
-        # Check if the vertical lines are valid
+            # ==== PROCESS DATA ====
 
-        # For N*N times
-        for i in range(n * n):
-            print(ideal_set == sorted(vert_lines[i]))
+            # Check if the horizontal lines are valid
 
-        # Check if the squares are valid
+            # For N*N times
+            for i in range(n * n):
+                if not (ideal_set == sorted(lines[i])):
+                    print('squares[i] = ', squares[i]) # DEBUG
+                    return False
 
-        # For N*N times
-        for i in range(n * n):
-            print(ideal_set == sorted(squares[i]))
+            # Check if the vertical lines are valid
 
+            # For N*N times
+            for i in range(n * n):
+                if not (ideal_set == sorted(vert_lines[i])):
+                    print('squares[i] = ', squares[i]) # DEBUG
+                    return False
+
+            # Check if the squares are valid
+
+            # For N*N times
+            for i in range(n * n):
+                if not (ideal_set == sorted(squares[i])):
+                    print('squares[i] = ', squares[i]) # DEBUG
+                    return False
+
+        clear()
+        return True
+
+
+if __name__ == '__main__':
+    if checker():
+        print("Sudoku is valid.")
+    else:
+        print("Sudoku is not valid!")
