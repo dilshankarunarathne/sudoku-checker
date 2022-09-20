@@ -73,10 +73,11 @@ def checker() -> bool:
                     return False
 
         clear()
+        return True
 
 
 if __name__ == '__main__':
-    if checker() is True:
+    if checker():
         print("Sudoku is valid.")
     else:
         print("Sudoku is not valid!")
