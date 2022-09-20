@@ -18,8 +18,8 @@ with open('test.txt', 'r') as f:
             lines.append(f.readline().split())
             print('line = ', lines[line])
 
-for i in lines[0]:
-    sum += int(i)
+for x in lines[0]:
+    sum += i
 
 print('first line sum = ', sum)
 
