@@ -22,6 +22,22 @@ with open('test.txt', 'r') as f:
             lines.append(f.readline().split())
             # print('line = ', lines[line]) # DEBUG
 
+        # ==== FILL DATA ====
+
+        # Fill vertical lines
+        for i in range(n):
+            vert_lines.append([])
+            for j in range(n):
+                vert_lines[i].append(lines[j][i])
+        # print('vert_lines = ', vert_lines) # DEBUG
+
+        # Fill squares
+        for i in range(n):
+            squares.append([])
+            for j in range(n):
+                squares[i].append(lines[i][j])
+        # print('squares = ', squares) # DEBUG
+
         # ==== PROCESS DATA ====
 
         # Check if the horizontal lines are valid
@@ -29,3 +45,16 @@ with open('test.txt', 'r') as f:
         # For N*N times
         for i in range(n * n):
             print(ideal_set == sorted(lines[i]))
+
+        # Check if the vertical lines are valid
+
+        # For N*N times
+        for i in range(n * n):
+            print(ideal_set == sorted(vert_lines[i]))
+
+        # Check if the squares are valid
+
+        # For N*N times
+        for i in range(n * n):
+            print(ideal_set == sorted(squares[i]))
+            
