@@ -11,3 +11,9 @@ with open('test.txt') as f:
             # Read N
             n = int(f.readline())
 
+            # For N lines...
+            for j in range(n):
+                # Read one line
+                line = f.readline().split()
+                print (line)
+
