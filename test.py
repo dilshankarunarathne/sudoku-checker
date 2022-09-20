@@ -7,18 +7,17 @@ with open('test.txt', 'r') as f:
     number_of_cases = int(f.readline())
     print(number_of_cases)
 
-    for case in range (number_of_cases):
-        print(case)
+    for case in range(number_of_cases):
 
-        # # For each case...
-        # for i in range(number_of_cases):
-        #     # Read N
-        #     for number in f.readline():
-        #         data.append(int(number))
+        # For each case...
+        for i in range(number_of_cases):
+            # Read N
+            for number in f.readline():
+                data.append(int(number))
 
-            # # For N lines...
-            # for j in range(n):
-            #     # Read one line
-            #     line = f.readline().split()
-            #     print (line)
+            # For N lines...
+            for j in range(n):
+                # Read one line
+                line = f.readline().split()
+                print (line)
 
