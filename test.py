@@ -7,6 +7,7 @@ with open('test.txt') as f:
         number_of_cases = int(f.readline())
 
         # For each case...
-
-        # Read N
+        for i in range(number_of_cases):
+            # Read N
+            n = int(f.readline())
 
