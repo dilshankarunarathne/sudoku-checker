@@ -73,8 +73,7 @@ def checker() -> bool:
 
 
 if __name__ == '__main__':
-    sudoku = checker()
-    if sudoku:
-        print("Sudoku is not valid")
-    else:
+    if checker():
         print("Sudoku is valid")
+    else:
+        print("Sudoku is not valid")

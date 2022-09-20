@@ -52,8 +52,9 @@ with open('./test.txt', 'r') as f:
         for i in range(n * n):
             print(ideal_set == sorted(vert_lines[i]))
 
-        # Check if the squares are valid 
+        # Check if the squares are valid
 
         # For N*N times
         for i in range(n * n):
             print(ideal_set == sorted(squares[i]))
+
