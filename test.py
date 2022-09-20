@@ -1,7 +1,7 @@
 data = []
 lines = []
 
-with open('test.txt', 'r') as f:
+with open('sample-io/sudoku_checker_sample_ts1_input.txt', 'r') as f:
 
     # Read the number of cases
     number_of_cases = int(f.readline())
@@ -11,4 +11,10 @@ with open('test.txt', 'r') as f:
         # Read N for case
         n = int(f.readline())
         print('n = ', n)
+
+        # For N*N times
+        for line in range(n*n):
+            # Read the line
+            lines.append(f.readline().split())
+            print('line = ', lines[line])
 
