@@ -25,16 +25,16 @@ with open('test.txt', 'r') as f:
         # ==== FILL DATA ====
 
         # Fill vertical lines TODO
-        for i in range(n):
+        for i in range(n * n):
             vert_lines.append([])
-            for j in range(n):
+            for j in range(n * n):
                 vert_lines[i].append(lines[j][i])
         # print('vert_lines = ', vert_lines) # DEBUG
 
         # Fill squares TODO
-        for i in range(n):
+        for i in range(n * n):
             squares.append([])
-            for j in range(n):
+            for j in range(n * n):
                 squares[i].append(lines[i][j])
         # print('squares = ', squares) # DEBUG
 
