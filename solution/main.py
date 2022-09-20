@@ -55,7 +55,7 @@ def checker() -> bool:
             # For N*N times
             for i in range(n * n):
                 if not (ideal_set == sorted(lines[i])):
-                    print('squares[i] = ', squares[i]) # DEBUG
+                    # print('squares[i] = ', squares[i]) # DEBUG
                     flag = False
                     break
 
@@ -64,7 +64,7 @@ def checker() -> bool:
             # For N*N times
             for i in range(n * n):
                 if not (ideal_set == sorted(vert_lines[i])):
-                    print('squares[i] = ', squares[i]) # DEBUG
+                    # print('squares[i] = ', squares[i]) # DEBUG
                     flag = False
                     break
 
@@ -73,7 +73,7 @@ def checker() -> bool:
             # For N*N times
             for i in range(n * n):
                 if not (ideal_set == sorted(squares[i])):
-                    print('squares[i] = ', squares[i]) # DEBUG
+                    # print('squares[i] = ', squares[i]) # DEBUG
                     flag = False
                     break
 
