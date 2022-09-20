@@ -5,19 +5,10 @@ with open('test.txt', 'r') as f:
 
     # Read the number of cases
     number_of_cases = int(f.readline())
-    print(number_of_cases)
+    print('num cases = ', number_of_cases)
 
     for case in range(number_of_cases):
-
-        # For each case...
-        for i in range(number_of_cases):
-            # Read N
-            for number in f.readline():
-                data.append(int(number))
-
-            # For N lines...
-            for j in range(n):
-                # Read one line
-                line = f.readline().split()
-                print (line)
+        # Read N for case
+        n = int(f.readline())
+        print('n = ', n)
 
