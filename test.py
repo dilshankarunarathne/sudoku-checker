@@ -10,7 +10,7 @@ with open('test.txt', 'r') as f:
     # print('num cases = ', number_of_cases) # DEBUG
 
     for case in range(number_of_cases):
-        # ==== READ DATA ===
+        # ==== READ DATA ====
 
         # Read N for case
         n = int(f.readline())
@@ -22,7 +22,9 @@ with open('test.txt', 'r') as f:
             lines.append(f.readline().split())
             # print('line = ', lines[line]) # DEBUG
 
-        # ==== PROCESS DATA ===
+        # ==== PROCESS DATA ====
+
+        # Check if the horizontal lines are valid
 
         # For N*N times
         for i in range(n * n):
