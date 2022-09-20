@@ -32,14 +32,14 @@ def checker() -> bool:
 
             # ==== FILL DATA ====
 
-            # Fill vertical lines TODO
+            # Fill vertical lines
             for i in range(n * n):
                 vert_lines.append([])
                 for j in range(n * n):
                     vert_lines[i].append(lines[j][i])
             # print('vert_lines = ', vert_lines) # DEBUG
 
-            # Fill squares TODO
+            # Fill squares
             for i in range(n * n):
                 squares.append([])
                 for j in range(n * n):
@@ -55,14 +55,14 @@ def checker() -> bool:
                 if not (ideal_set == sorted(lines[i])):
                     return False
 
-            # Check if the vertical lines are valid TODO
+            # Check if the vertical lines are valid
 
             # For N*N times
             for i in range(n * n):
                 if not (ideal_set == sorted(vert_lines[i])):
                     return False
 
-            # Check if the squares are valid TODO
+            # Check if the squares are valid
 
             # For N*N times
             for i in range(n * n):
