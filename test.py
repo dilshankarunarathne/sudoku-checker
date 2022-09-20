@@ -1,7 +1,7 @@
 data = []
 lines = []
 
-with open('sample-io/sudoku_checker_sample_ts1_input.txt', 'r') as f:
+with open('test.txt', 'r') as f:
 
     # Read the number of cases
     number_of_cases = int(f.readline())
