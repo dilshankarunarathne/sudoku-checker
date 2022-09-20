@@ -4,7 +4,7 @@ lines = []
 with open('test.txt', 'r') as f:
 
     # Read the number of cases
-    number_of_cases = int(f.read())
+    number_of_cases = int(f.readline())
     print(number_of_cases)
 
     for line in f:
