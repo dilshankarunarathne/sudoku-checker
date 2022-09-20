@@ -1,9 +1,9 @@
 data = []
 
-f1 = open('test.txt')
+f1 = open('test.txt', 'r')
 print(f1.read())
 
-with open('test.txt') as f:
+with open('test.txt', 'r') as f:
     for line in f:
 
         # Read the number of cases
