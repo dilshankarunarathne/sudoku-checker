@@ -24,14 +24,14 @@ with open('test.txt', 'r') as f:
 
         # ==== FILL DATA ====
 
-        # Fill vertical lines
+        # Fill vertical lines TODO
         for i in range(n):
             vert_lines.append([])
             for j in range(n):
                 vert_lines[i].append(lines[j][i])
         # print('vert_lines = ', vert_lines) # DEBUG
 
-        # Fill squares
+        # Fill squares TODO
         for i in range(n):
             squares.append([])
             for j in range(n):
@@ -46,15 +46,14 @@ with open('test.txt', 'r') as f:
         for i in range(n * n):
             print(ideal_set == sorted(lines[i]))
 
-        # Check if the vertical lines are valid
+        # Check if the vertical lines are valid TODO
 
         # For N*N times
         for i in range(n * n):
             print(ideal_set == sorted(vert_lines[i]))
 
-        # Check if the squares are valid
+        # Check if the squares are valid TODO
 
         # For N*N times
         for i in range(n * n):
             print(ideal_set == sorted(squares[i]))
-            
