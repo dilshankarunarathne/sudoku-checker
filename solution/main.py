@@ -5,6 +5,12 @@ vert_lines = []
 squares = []
 
 
+def clear():
+    lines.clear()
+    vert_lines.clear()
+    squares.clear()
+
+
 def checker() -> bool:
     with open('test.txt', 'r') as f:
         # Read the number of cases
@@ -63,11 +69,6 @@ def checker() -> bool:
                 if not (ideal_set == sorted(squares[i])):
                     return False
 
-            # ==== CLEAN DATA ====
-
-            lines = []
-            vert_lines = []
-            squares = []
 
 
 if __name__ == '__main__':
