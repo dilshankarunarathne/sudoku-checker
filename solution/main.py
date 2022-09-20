@@ -53,6 +53,7 @@ def checker() -> bool:
             # For N*N times
             for i in range(n * n):
                 if not (ideal_set == sorted(lines[i])):
+                    print('squares[i] = ', squares[i]) # DEBUG
                     return False
 
             # Check if the vertical lines are valid
@@ -60,6 +61,7 @@ def checker() -> bool:
             # For N*N times
             for i in range(n * n):
                 if not (ideal_set == sorted(vert_lines[i])):
+                    print('squares[i] = ', squares[i]) # DEBUG
                     return False
 
             # Check if the squares are valid
@@ -67,13 +69,14 @@ def checker() -> bool:
             # For N*N times
             for i in range(n * n):
                 if not (ideal_set == sorted(squares[i])):
+                    print('squares[i] = ', squares[i]) # DEBUG
                     return False
 
         clear()
 
 
 if __name__ == '__main__':
-    if checker():
+    if checker() is True:
         print("Sudoku is valid.")
     else:
         print("Sudoku is not valid!")
